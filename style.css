@@ -665,6 +665,9 @@ a {
   .hero-card {
     padding: 42px 18px 34px;
   }
+  .hidden {
+  display: none !important;
+}
 
   .section-card {
     padding: 24px 16px;
