@@ -35,7 +35,7 @@
           <div class="paper-grid">
             <div class="paper-note">
               <h3>Open when you miss me</h3>
-              <button class="btn btn-secondary" onclick="toggleLetter('letter1')">Open Letter</button>
+              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter1')">Open Letter</button>
               <p id="letter1" class="hidden" style="margin-top:14px;">
                 No matter where you are, a part of my heart is always with you.
                 Distance can never really change that.
@@ -44,7 +44,7 @@
 
             <div class="paper-note">
               <h3>Open when you feel low</h3>
-              <button class="btn btn-secondary" onclick="toggleLetter('letter2')">Open Letter</button>
+              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter2')">Open Letter</button>
               <p id="letter2" class="hidden" style="margin-top:14px;">
                 You are still soft, still special, still enough — even on the days
                 that feel heavy.
@@ -53,7 +53,7 @@
 
             <div class="paper-note">
               <h3>Open when you need motivation</h3>
-              <button class="btn btn-secondary" onclick="toggleLetter('letter3')">Open Letter</button>
+              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter3')">Open Letter</button>
               <p id="letter3" class="hidden" style="margin-top:14px;">
                 I hope you never forget how capable you are. You have already come
                 so far.
@@ -62,7 +62,7 @@
 
             <div class="paper-note">
               <h3>Open when you want to smile</h3>
-              <button class="btn btn-secondary" onclick="toggleLetter('letter4')">Open Letter</button>
+              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter4')">Open Letter</button>
               <p id="letter4" class="hidden" style="margin-top:14px;">
                 Think of our silly little moments and know there are so many more
                 waiting for us.
@@ -71,7 +71,7 @@
 
             <div class="paper-note">
               <h3>Open when you need love</h3>
-              <button class="btn btn-secondary" onclick="toggleLetter('letter5')">Open Letter</button>
+              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter5')">Open Letter</button>
               <p id="letter5" class="hidden" style="margin-top:14px;">
                 You are loved on your best days, tired days, quiet days, and every
                 in-between day too.
@@ -80,7 +80,7 @@
 
             <div class="paper-note">
               <h3>Open when you doubt yourself</h3>
-              <button class="btn btn-secondary" onclick="toggleLetter('letter6')">Open Letter</button>
+              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter6')">Open Letter</button>
               <p id="letter6" class="hidden" style="margin-top:14px;">
                 You are already enough. You do not have to earn the love that is
                 already yours.
@@ -89,16 +89,16 @@
 
             <div class="paper-note">
               <h3>Open when you cannot sleep</h3>
-              <button class="btn btn-secondary" onclick="toggleLetter('letter7')">Open Letter</button>
+              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter7')">Open Letter</button>
               <p id="letter7" class="hidden" style="margin-top:14px;">
                 Close your eyes and imagine me telling you that everything will be okay,
-                and that tomorrow will be kinder.
+                and tomorrow will be kinder.
               </p>
             </div>
 
             <div class="paper-note">
               <h3>Open when you need a reminder</h3>
-              <button class="btn btn-secondary" onclick="toggleLetter('letter8')">Open Letter</button>
+              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter8')">Open Letter</button>
               <p id="letter8" class="hidden" style="margin-top:14px;">
                 You are one of the most special people in my life, and I hope you never
                 forget how deeply you are loved.
@@ -110,6 +110,13 @@
     </section>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    function toggleLetter(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.toggle("hidden");
+      }
+    }
+  </script>
 </body>
 </html>
