@@ -9,130 +9,222 @@
 <body>
   <div class="background-glow"></div>
 
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-tag">made with love, only for you</p>
+  <header class="hero">
+    <div class="hero-box">
+      <p class="mini-tag">made with love, only for you</p>
       <h1>HAPPY BIRTHDAY KYC ❤️</h1>
       <p class="hero-date">26.06.2026</p>
-      <p class="hero-subtitle">
-        This is not just a website.<br />
-        This is a small world made to remind you how deeply loved you are.
+      <p class="hero-text">
+        This little world is made just to remind you how deeply loved you are.
       </p>
-      <a href="#message" class="hero-button">Begin Your Surprise</a>
     </div>
-  </section>
+  </header>
 
-  <section class="section-card" id="message">
-    <p class="section-label">for you</p>
-    <h2>A Letter For The Birthday Boy</h2>
-    <p class="long-text">
-      Today is not just about celebrating your birthday. It is about celebrating
-      you — your heart, your presence, your kindness, your strength, and all the
-      little things about you that make this world softer and better.
-      <br /><br />
-      I do not think you fully realize how special you are. The way you care,
-      the way you stay, the way you love, the way you exist — all of it means
-      more than words can ever properly hold.
-      <br /><br />
-      So I made this for you. A little space filled with memories, love,
-      surprises, and reminders that you are appreciated far more than you know.
-      <br /><br />
-      Happy Birthday, my love. I hope this makes you smile, blush, laugh,
-      and most of all, feel loved.
-    </p>
-  </section>
+  <nav class="menu">
+    <button class="menu-btn active" onclick="showSection('home', this)">Home</button>
+    <button class="menu-btn" onclick="showSection('game', this)">Play Game to Unlock Gifts</button>
+    <button class="menu-btn" onclick="showSection('letters', this)">Letters Waiting for You</button>
+    <button class="menu-btn" onclick="showSection('memories', this)">Memories With You</button>
+    <button class="menu-btn" onclick="showSection('videos', this)">From Your People</button>
+    <button class="menu-btn" onclick="showSection('reasons', this)">Reasons You're Loved</button>
+  </nav>
 
-  <section class="section-card">
-    <p class="section-label">reasons you're loved</p>
-    <h2>Why You Mean So Much</h2>
-    <div class="reasons-grid">
-      <div class="reason-box">You are loved because your presence feels like home.</div>
-      <div class="reason-box">You are loved because you make people feel safe.</div>
-      <div class="reason-box">You are loved because your smile can fix bad days.</div>
-      <div class="reason-box">You are loved because you care deeply, even in small things.</div>
-      <div class="reason-box">You are loved because your heart is soft in the rarest way.</div>
-      <div class="reason-box">You are loved because you are strong even on hard days.</div>
-      <div class="reason-box">You are loved because your laugh makes everything lighter.</div>
-      <div class="reason-box">You are loved because being you is already enough.</div>
-    </div>
-  </section>
+  <main class="main-wrap">
 
-  <section class="section-card">
-    <p class="section-label">your moments</p>
-    <h2>A Few Glimpses Of You</h2>
-    <p class="small-note">Replace these with his real photos.</p>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" alt="photo 1">
-      <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="photo 2">
-      <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=800&q=80" alt="photo 3">
-      <img src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=800&q=80" alt="photo 4">
-    </div>
-  </section>
-
-  <section class="section-card">
-    <p class="section-label">from your people</p>
-    <h2>Messages From The Ones Who Love You</h2>
-    <p class="small-note">Replace the sample video links with videos from family and friends.</p>
-    <div class="video-grid">
-      <div class="video-card">
-        <h3>From Family ❤️</h3>
-        <video controls>
-          <source src="family-video.mp4" type="video/mp4">
-        </video>
+    <!-- HOME -->
+    <section id="home" class="content-section show">
+      <div class="card">
+        <p class="section-label">for you</p>
+        <h2>A Birthday Message For You</h2>
+        <p class="long-text">
+          Happy Birthday, my love.
+          <br><br>
+          This is not just a website. This is a small space made only for you —
+          with memories, words, surprises, and little reminders of how much you
+          mean to me and to everyone who loves you.
+          <br><br>
+          I hope when you go through this, you smile a little more, laugh a little
+          more, and feel all the love I wanted to wrap around you today.
+          <br><br>
+          You are rare. You are special. And today is all about celebrating you.
+        </p>
       </div>
-      <div class="video-card">
-        <h3>From Friends 🎥</h3>
-        <video controls>
-          <source src="friends-video.mp4" type="video/mp4">
-        </video>
+
+      <div class="home-grid">
+        <div class="small-card">
+          <h3>🎁 Play Game</h3>
+          <p>Answer correctly and unlock all 20 birthday gifts one by one.</p>
+        </div>
+        <div class="small-card">
+          <h3>💌 Letters Waiting for You</h3>
+          <p>Open little notes from me whenever you need them.</p>
+        </div>
+        <div class="small-card">
+          <h3>📸 Memories With You</h3>
+          <p>A collection of moments and pictures I never want to forget.</p>
+        </div>
+        <div class="small-card">
+          <h3>🎥 From Your People</h3>
+          <p>Messages from the people who love you the most.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section-card quiz-section">
-    <p class="section-label">gift unlock challenge</p>
-    <h2>Answer Right, Unlock Your Gift 🎁</h2>
-    <p class="small-note">
-      Each correct answer unlocks one gift. There are 20 gifts waiting for you.
-    </p>
+    <!-- GAME -->
+    <section id="game" class="content-section">
+      <div class="card">
+        <p class="section-label">gift unlock challenge</p>
+        <h2>Play Game to Unlock Gifts 🎁</h2>
+        <p class="small-note">
+          Every correct answer unlocks the next gift. You have 20 gifts waiting.
+        </p>
 
-    <div class="progress-text" id="progressText">Question 1 of 20</div>
+        <div id="progressText" class="progress-text">Question 1 of 20</div>
 
-    <div class="question-box">
-      <h3 id="question">Loading question...</h3>
-      <div id="options" class="options"></div>
-    </div>
+        <div class="question-box">
+          <h3 id="question">Loading question...</h3>
+          <div id="options" class="options"></div>
+        </div>
 
-    <button class="main-btn" onclick="checkAnswer()">Submit Answer</button>
+        <button class="main-btn" onclick="checkAnswer()">Submit Answer</button>
 
-    <p id="result" class="result-text"></p>
+        <p id="result" class="result-text"></p>
 
-    <div id="giftReveal" class="gift-reveal hidden"></div>
+        <div id="giftReveal" class="gift-reveal hidden"></div>
 
-    <button id="nextBtn" class="next-btn hidden" onclick="nextQuestion()">
-      Unlock Next Gift →
-    </button>
-  </section>
+        <button id="nextBtn" class="next-btn hidden" onclick="nextQuestion()">
+          Unlock Next Gift →
+        </button>
+      </div>
 
-  <section class="section-card hidden" id="finalSection">
-    <p class="section-label">one last thing</p>
-    <h2>Before You Go...</h2>
-    <p class="long-text">
-      I hope every part of this made your day feel a little more special.
-      Not because gifts are everything, but because you deserve to feel celebrated.
-      <br /><br />
-      You deserve love that is loud when it needs to be, soft when it should be,
-      and constant in all the little spaces in between.
-      <br /><br />
-      Thank you for being you. Thank you for being someone so worth loving.
-      <br /><br />
-      Happy Birthday, again.<br />
-      And no matter how many gifts you open today,
-      the biggest truth will remain the same —
-      <span class="highlight-line">you are so, so loved.</span>
-    </p>
-  </section>
+      <div id="finalGameMessage" class="card hidden">
+        <p class="section-label">you did it</p>
+        <h2>All 20 Gifts Unlocked ❤️</h2>
+        <p class="long-text">
+          You made it through every surprise.
+          <br><br>
+          And I hope each one reminded you of the same thing:
+          you are celebrated, cherished, and so very loved.
+        </p>
+      </div>
+    </section>
+
+    <!-- LETTERS -->
+    <section id="letters" class="content-section">
+      <div class="card">
+        <p class="section-label">from me to you</p>
+        <h2>Letters Waiting for You 💌</h2>
+        <div class="letters-grid">
+          <button class="letter-btn" onclick="toggleLetter(this)">Open when you miss me</button>
+          <div class="letter-text hidden-letter">
+            Read this and remember that no matter where you are, a part of my heart is always with you.
+          </div>
+
+          <button class="letter-btn" onclick="toggleLetter(this)">Open when you feel low</button>
+          <div class="letter-text hidden-letter">
+            You are stronger than the bad day you are having, and softer than the world deserves.
+          </div>
+
+          <button class="letter-btn" onclick="toggleLetter(this)">Open when you need motivation</button>
+          <div class="letter-text hidden-letter">
+            You have already come so far, and I hope you never forget how capable you truly are.
+          </div>
+
+          <button class="letter-btn" onclick="toggleLetter(this)">Open when you want to smile</button>
+          <div class="letter-text hidden-letter">
+            Think of all our silly little moments. There are many more waiting for us.
+          </div>
+
+          <button class="letter-btn" onclick="toggleLetter(this)">Open when you need love</button>
+          <div class="letter-text hidden-letter">
+            You are loved on your best days, your tired days, your quiet days, and all the in-between ones.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section id="memories" class="content-section">
+      <div class="card">
+        <p class="section-label">moments with you</p>
+        <h2>Memories With You 📸</h2>
+        <p class="small-note">Replace these sample images with your real photos.</p>
+        <div class="gallery">
+          <img src="photos/pic1.jpg" alt="memory 1">
+          <img src="photos/pic2.jpg" alt="memory 2">
+          <img src="photos/pic3.jpg" alt="memory 3">
+          <img src="photos/pic4.jpg" alt="memory 4">
+          <img src="photos/pic5.jpg" alt="memory 5">
+          <img src="photos/pic6.jpg" alt="memory 6">
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="videos" class="content-section">
+      <div class="card">
+        <p class="section-label">messages for you</p>
+        <h2>From Your People 🎥</h2>
+        <p class="small-note">Add 5 videos here: from you, his family, and his friends.</p>
+
+        <div class="video-grid">
+          <div class="video-card">
+            <h3>From Me ❤️</h3>
+            <video controls>
+              <source src="videos/video1.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="video-card">
+            <h3>From Family 1</h3>
+            <video controls>
+              <source src="videos/video2.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="video-card">
+            <h3>From Family 2</h3>
+            <video controls>
+              <source src="videos/video3.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="video-card">
+            <h3>From Friend 1</h3>
+            <video controls>
+              <source src="videos/video4.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="video-card">
+            <h3>From Friend 2</h3>
+            <video controls>
+              <source src="videos/video5.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REASONS -->
+    <section id="reasons" class="content-section">
+      <div class="card">
+        <p class="section-label">reasons you're loved</p>
+        <h2>Why You Are So Loved ❤️</h2>
+        <div class="reasons-grid">
+          <div class="reason-box">You are loved because your presence feels like peace.</div>
+          <div class="reason-box">You are loved because your smile makes hard days softer.</div>
+          <div class="reason-box">You are loved because you care so deeply.</div>
+          <div class="reason-box">You are loved because you make people feel safe.</div>
+          <div class="reason-box">You are loved because your heart is beautiful.</div>
+          <div class="reason-box">You are loved because your laugh lights up moments.</div>
+          <div class="reason-box">You are loved because you stay strong through hard things.</div>
+          <div class="reason-box">You are loved because being you is already enough.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <script src="script.js"></script>
 </body>
