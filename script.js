@@ -104,128 +104,64 @@ const questions = [
 let currentQuestion = 0;
 let selectedOption = "";
 
-function enterWebsite() {
-  document.getElementById("hero").classList.add("hidden");
-  document.getElementById("dashboard").classList.remove("hidden");
-}
+function renderQuiz() {
+  const progress = document.getElementById("progress");
+  const questionEl = document.getElementById("question");
+  const optionsEl = document.getElementById("options");
+  const resultEl = document.getElementById("result");
+  const giftBox = document.getElementById("giftBox");
+  const nextBtn = document.getElementById("nextBtn");
 
-function goHome() {
-  closePanels();
-  document.getElementById("dashboard").classList.add("hidden");
-  document.getElementById("hero").classList.remove("hidden");
-}
+  if (!progress || !questionEl || !optionsEl) return;
 
-function openSection(name) {
-  document.getElementById("dashboard").classList.add("hidden");
-
-  closePanels();
-
-  const map = {
-    game: "gamePanel",
-    letters: "lettersPanel",
-    memories: "memoriesPanel",
-    videos: "videosPanel",
-    reasons: "reasonsPanel",
-    final: "finalPanel",
-  };
-
-  const panel = document.getElementById(map[name]);
-  panel.classList.remove("hidden");
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-function closePanels() {
-  const panels = document.querySelectorAll(".panel");
-  panels.forEach((panel) => panel.classList.add("hidden"));
-  document.getElementById("dashboard").classList.remove("hidden");
-}
-
-function loadQuestion() {
   selectedOption = "";
-
-  document.getElementById("progressText").innerText =
-    `Question ${currentQuestion + 1} of ${questions.length}`;
-
-  document.getElementById("result").innerText = "";
-  document.getElementById("giftReveal").classList.add("hidden");
-  document.getElementById("nextBtn").classList.add("hidden");
+  resultEl.textContent = "";
+  giftBox.innerHTML = "";
+  nextBtn.style.display = "none";
 
   const q = questions[currentQuestion];
-  document.getElementById("question").innerText = q.question;
-
-  const optionsDiv = document.getElementById("options");
-  optionsDiv.innerHTML = "";
+  progress.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+  questionEl.textContent = q.question;
+  optionsEl.innerHTML = "";
 
   q.options.forEach((option) => {
     const btn = document.createElement("button");
     btn.className = "option-btn";
-    btn.innerText = option;
+    btn.textContent = option;
     btn.onclick = () => selectOption(option, btn);
-    optionsDiv.appendChild(btn);
+    optionsEl.appendChild(btn);
   });
 }
 
-function selectOption(option, clickedBtn) {
+function selectOption(option, btn) {
   selectedOption = option;
-  document.querySelectorAll(".option-btn").forEach((btn) => btn.classList.remove("selected"));
-  clickedBtn.classList.add("selected");
+  document.querySelectorAll(".option-btn").forEach((b) => b.classList.remove("selected"));
+  btn.classList.add("selected");
 }
 
 function checkAnswer() {
-  const result = document.getElementById("result");
-  const giftReveal = document.getElementById("giftReveal");
+  const resultEl = document.getElementById("result");
+  const giftBox = document.getElementById("giftBox");
   const nextBtn = document.getElementById("nextBtn");
-  const celebrationGif = document.getElementById("celebrationGif");
 
   if (!selectedOption) {
-    result.style.color = "#ffcc73";
-    result.innerText = "Select an option first ❤️";
+    resultEl.style.color = "#c07a00";
+    resultEl.textContent = "Please select an option first 💌";
     return;
   }
 
   if (selectedOption === questions[currentQuestion].answer) {
     const giftNumber = currentQuestion + 1;
-    result.style.color = "#94ffb2";
-    result.innerText = "Correct 🎉 You unlocked the next gift.";
+    resultEl.style.color = "#15803d";
+    resultEl.textContent = "Correct 🎉 You unlocked the next gift.";
 
-    giftReveal.innerHTML = `
+    giftBox.innerHTML = `
       <div>Go open</div>
       <div class="gift-big">Gift #${giftNumber} 🎁</div>
-      <div>Then click next to continue the surprise.</div>
+      <div>Then click next for the next question.</div>
     `;
-    giftReveal.classList.remove("hidden");
-    nextBtn.classList.remove("hidden");
-
-    celebrationGif.src = "https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif";
+    nextBtn.style.display = "inline-block";
   } else {
-    result.style.color = "#ff9f9f";
-    result.innerText = "That’s not correct. Try again, love ❤️";
-    giftReveal.classList.add("hidden");
-    nextBtn.classList.add("hidden");
-    celebrationGif.src = "https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif";
-  }
-}
-
-function nextQuestion() {
-  currentQuestion++;
-
-  if (currentQuestion < questions.length) {
-    loadQuestion();
-  } else {
-    document.getElementById("finalGameMessage").classList.remove("hidden");
-    document.getElementById("progressText").innerText = "All gifts unlocked";
-    document.getElementById("question").innerText = "You unlocked everything ❤️";
-    document.getElementById("options").innerHTML = "";
-    document.getElementById("result").innerText = "";
-    document.getElementById("giftReveal").classList.add("hidden");
-    document.getElementById("nextBtn").classList.add("hidden");
-  }
-}
-
-function togglePaper(card) {
-  card.classList.toggle("open");
-}
-
-window.onload = () => {
-  loadQuestion();
-};
+    resultEl.style.color = "#dc2626";
+    resultEl.textContent = "Oops, that's not correct. Try again ❤️";
+    giftBox.inner
