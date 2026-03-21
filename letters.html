@@ -5,6 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Letters 💌</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .letters-wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .letter-paper {
+      background: linear-gradient(180deg, #fff8ec, #f7ead0);
+      border-radius: 12px;
+      padding: 26px 18px 18px;
+      box-shadow: 0 14px 28px rgba(106, 78, 47, 0.12);
+      position: relative;
+      color: #59442d;
+    }
+
+    .letter-paper::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 86px;
+      height: 24px;
+      background: rgba(255,255,255,0.5);
+      border: 1px solid rgba(220,220,220,0.68);
+    }
+
+    .letter-paper h3 {
+      margin: 0 0 12px;
+      font-family: "Great Vibes", cursive;
+      font-size: 2rem;
+      color: #b56444;
+      font-weight: 400;
+    }
+
+    .letter-paper p {
+      line-height: 1.9;
+      margin: 14px 0 0;
+    }
+
+    details {
+      margin-top: 10px;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #fff0c8, #f9dce4);
+      color: #9e4760;
+      font-weight: 600;
+      box-shadow: 0 10px 26px rgba(176, 110, 132, 0.08);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "Open Letter";
+    }
+
+    details[open] summary::after {
+      content: "Close Letter";
+    }
+  </style>
 </head>
 <body>
   <div class="page-shell">
@@ -32,91 +102,98 @@
             Click each note to open what is written inside.
           </p>
 
-          <div class="paper-grid">
-            <div class="paper-note">
+          <div class="letters-wrap">
+            <div class="letter-paper">
               <h3>Open when you miss me</h3>
-              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter1')">Open Letter</button>
-              <p id="letter1" class="hidden" style="margin-top:14px;">
-                No matter where you are, a part of my heart is always with you.
-                Distance can never really change that.
-              </p>
+              <details>
+                <summary></summary>
+                <p>
+                  No matter where you are, a part of my heart is always with you.
+                  Distance can never really change that.
+                </p>
+              </details>
             </div>
 
-            <div class="paper-note">
+            <div class="letter-paper">
               <h3>Open when you feel low</h3>
-              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter2')">Open Letter</button>
-              <p id="letter2" class="hidden" style="margin-top:14px;">
-                You are still soft, still special, still enough — even on the days
-                that feel heavy.
-              </p>
+              <details>
+                <summary></summary>
+                <p>
+                  You are still soft, still special, still enough — even on the days
+                  that feel heavy.
+                </p>
+              </details>
             </div>
 
-            <div class="paper-note">
+            <div class="letter-paper">
               <h3>Open when you need motivation</h3>
-              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter3')">Open Letter</button>
-              <p id="letter3" class="hidden" style="margin-top:14px;">
-                I hope you never forget how capable you are. You have already come
-                so far.
-              </p>
+              <details>
+                <summary></summary>
+                <p>
+                  I hope you never forget how capable you are. You have already come
+                  so far.
+                </p>
+              </details>
             </div>
 
-            <div class="paper-note">
+            <div class="letter-paper">
               <h3>Open when you want to smile</h3>
-              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter4')">Open Letter</button>
-              <p id="letter4" class="hidden" style="margin-top:14px;">
-                Think of our silly little moments and know there are so many more
-                waiting for us.
-              </p>
+              <details>
+                <summary></summary>
+                <p>
+                  Think of our silly little moments and know there are so many more
+                  waiting for us.
+                </p>
+              </details>
             </div>
 
-            <div class="paper-note">
+            <div class="letter-paper">
               <h3>Open when you need love</h3>
-              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter5')">Open Letter</button>
-              <p id="letter5" class="hidden" style="margin-top:14px;">
-                You are loved on your best days, tired days, quiet days, and every
-                in-between day too.
-              </p>
+              <details>
+                <summary></summary>
+                <p>
+                  You are loved on your best days, tired days, quiet days, and every
+                  in-between day too.
+                </p>
+              </details>
             </div>
 
-            <div class="paper-note">
+            <div class="letter-paper">
               <h3>Open when you doubt yourself</h3>
-              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter6')">Open Letter</button>
-              <p id="letter6" class="hidden" style="margin-top:14px;">
-                You are already enough. You do not have to earn the love that is
-                already yours.
-              </p>
+              <details>
+                <summary></summary>
+                <p>
+                  You are already enough. You do not have to earn the love that is
+                  already yours.
+                </p>
+              </details>
             </div>
 
-            <div class="paper-note">
+            <div class="letter-paper">
               <h3>Open when you cannot sleep</h3>
-              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter7')">Open Letter</button>
-              <p id="letter7" class="hidden" style="margin-top:14px;">
-                Close your eyes and imagine me telling you that everything will be okay,
-                and tomorrow will be kinder.
-              </p>
+              <details>
+                <summary></summary>
+                <p>
+                  Close your eyes and imagine me telling you that everything will be okay,
+                  and tomorrow will be kinder.
+                </p>
+              </details>
             </div>
 
-            <div class="paper-note">
+            <div class="letter-paper">
               <h3>Open when you need a reminder</h3>
-              <button class="btn btn-secondary" type="button" onclick="toggleLetter('letter8')">Open Letter</button>
-              <p id="letter8" class="hidden" style="margin-top:14px;">
-                You are one of the most special people in my life, and I hope you never
-                forget how deeply you are loved.
-              </p>
+              <details>
+                <summary></summary>
+                <p>
+                  You are one of the most special people in my life, and I hope you never
+                  forget how deeply you are loved.
+                </p>
+              </details>
             </div>
           </div>
         </div>
       </div>
     </section>
   </div>
-
-  <script>
-    function toggleLetter(id) {
-      const el = document.getElementById(id);
-      if (el) {
-        el.classList.toggle("hidden");
-      }
-    }
-  </script>
 </body>
 </html>
