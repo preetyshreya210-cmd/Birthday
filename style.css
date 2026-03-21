@@ -1,24 +1,59 @@
-🟢 2. style.css
 body {
-  font-family: Arial;
-  background: #ffe4e6;
-  text-align: center;
   margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffe4ec, #fff5f8);
+  color: #4a2c35;
+  text-align: center;
 }
 
-.container {
-  margin-top: 100px;
+/* HERO */
+.hero {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #ffd6e0, #fff);
 }
 
+.hero h1 {
+  font-size: 3rem;
+  color: #d6336c;
+}
+
+.date {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* CARD */
+.card {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 700px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 105, 135, 0.2);
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery img {
+  border-radius: 10px;
+}
+
+/* BUTTON */
 button {
   padding: 10px 20px;
-  margin: 10px;
-  background: pink;
+  background: #ff5c8a;
   border: none;
   border-radius: 10px;
+  color: white;
   cursor: pointer;
-}
-
-.hidden {
-  display: none;
 }
