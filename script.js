@@ -25,9 +25,9 @@ const questions = [
     answer: "Canberra",
   },
   {
-    question: "Which Schedule of the Indian Constitution contains the Union, State and Concurrent Lists?",
-    options: ["Fifth Schedule", "Seventh Schedule", "Ninth Schedule", "Tenth Schedule"],
-    answer: "Seventh Schedule",
+    question: "Which Schedule contains Union, State and Concurrent Lists?",
+    options: ["Fifth", "Seventh", "Ninth", "Tenth"],
+    answer: "Seventh",
   },
   {
     question: "Who was the first President of India?",
@@ -50,7 +50,7 @@ const questions = [
     answer: "Nile",
   },
   {
-    question: "Article 21 of the Constitution deals with:",
+    question: "Article 21 deals with:",
     options: ["Freedom of speech", "Right to life and personal liberty", "Equality before law", "Cultural rights"],
     answer: "Right to life and personal liberty",
   },
@@ -61,7 +61,7 @@ const questions = [
   },
   {
     question: "Who appoints the Prime Minister of India?",
-    options: ["Chief Justice of India", "President of India", "Lok Sabha Speaker", "Cabinet Secretary"],
+    options: ["Chief Justice", "President of India", "Lok Sabha Speaker", "Cabinet Secretary"],
     answer: "President of India",
   },
   {
@@ -70,7 +70,7 @@ const questions = [
     answer: "O-",
   },
   {
-    question: "How many Fundamental Duties are currently listed in the Indian Constitution?",
+    question: "How many Fundamental Duties are currently listed?",
     options: ["10", "11", "12", "9"],
     answer: "11",
   },
@@ -104,9 +104,19 @@ const questions = [
 let currentQuestion = 0;
 let selectedOption = "";
 
+function showSection(id, clickedBtn) {
+  const sections = document.querySelectorAll(".content-section");
+  sections.forEach((section) => section.classList.remove("show"));
+
+  const buttons = document.querySelectorAll(".menu-btn");
+  buttons.forEach((btn) => btn.classList.remove("active"));
+
+  document.getElementById(id).classList.add("show");
+  if (clickedBtn) clickedBtn.classList.add("active");
+}
+
 function loadQuestion() {
   selectedOption = "";
-
   document.getElementById("progressText").innerText =
     `Question ${currentQuestion + 1} of ${questions.length}`;
 
@@ -131,10 +141,8 @@ function loadQuestion() {
 
 function selectOption(option, clickedBtn) {
   selectedOption = option;
-
   const allOptions = document.querySelectorAll(".option-btn");
   allOptions.forEach((btn) => btn.classList.remove("selected"));
-
   clickedBtn.classList.add("selected");
 }
 
@@ -145,20 +153,19 @@ function checkAnswer() {
 
   if (!selectedOption) {
     result.style.color = "#ffb347";
-    result.innerText = "Select an option first, birthday boy ❤️";
+    result.innerText = "Select an option first ❤️";
     return;
   }
 
   if (selectedOption === questions[currentQuestion].answer) {
     const giftNumber = currentQuestion + 1;
-
     result.style.color = "#7dffb0";
     result.innerText = "Correct 🎉 You unlocked the next gift.";
 
     giftReveal.innerHTML = `
       <div>Go open</div>
       <div class="gift-big">Gift #${giftNumber} 🎁</div>
-      <div>Come back after opening it to unlock the next surprise.</div>
+      <div>Then click next to continue the surprise.</div>
     `;
     giftReveal.classList.remove("hidden");
     nextBtn.classList.remove("hidden");
@@ -166,6 +173,7 @@ function checkAnswer() {
     result.style.color = "#ff8f8f";
     result.innerText = "That’s not correct. Try again, love ❤️";
     giftReveal.classList.add("hidden");
+    nextBtn.classList.add("hidden");
   }
 }
 
@@ -175,10 +183,22 @@ function nextQuestion() {
   if (currentQuestion < questions.length) {
     loadQuestion();
   } else {
-    document.querySelector(".quiz-section").classList.add("hidden");
-    document.getElementById("finalSection").classList.remove("hidden");
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    document.getElementById("finalGameMessage").classList.remove("hidden");
+    document.getElementById("result").innerText = "";
+    document.getElementById("giftReveal").classList.add("hidden");
+    document.getElementById("nextBtn").classList.add("hidden");
+    document.getElementById("question").innerText = "You unlocked everything ❤️";
+    document.getElementById("options").innerHTML = "";
+    document.getElementById("progressText").innerText = "All gifts unlocked";
   }
 }
 
-window.onload = loadQuestion;
+function toggleLetter(button) {
+  const next = button.nextElementSibling;
+  next.classList.toggle("hidden-letter");
+}
+
+window.onload = () => {
+  loadQuestion();
+  showSection("home", document.querySelector(".menu-btn"));
+};
