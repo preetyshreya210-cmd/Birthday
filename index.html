@@ -1,29 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Birthday Surprise ❤️</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Happy Birthday ❤️</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<div class="container">
+<!-- 🎬 HERO SECTION -->
+<section class="hero">
+  <h1>HAPPY BIRTHDAY KYC ❤️</h1>
+  <p class="date">26.06.2026</p>
+  <p class="tagline">A little world made just for you 💖</p>
+</section>
 
-  <h1>Happy Birthday ❤️</h1>
-  <p>This is something special just for you 💖</p>
+<!-- 💌 MESSAGE -->
+<section class="card">
+  <h2>For You 💌</h2>
+  <p>
+    You are one of the most special people in my life.  
+    The way you care, the way you love, the way you exist —  
+    everything about you is so rare and beautiful.  
+    <br><br>
+    I hope this little surprise makes you feel even a fraction  
+    of how loved you truly are.  
+    <br><br>
+    Happy Birthday, my love ❤️
+  </p>
+</section>
 
-  <button onclick="startQuiz()">Start Your Surprise 🎁</button>
+<!-- 💖 REASONS -->
+<section class="card">
+  <h2>Reasons You're Loved 💖</h2>
+  <ul>
+    <li>You make people feel safe and understood</li>
+    <li>Your smile can fix the worst day</li>
+    <li>You care deeply, even in small things</li>
+    <li>You are kind without expecting anything</li>
+    <li>You are strong even when things are hard</li>
+    <li>You are you — and that is enough</li>
+  </ul>
+</section>
 
-  <div id="quiz" class="hidden">
-    <h2 id="question"></h2>
-    <div id="options"></div>
-    <button onclick="checkAnswer()">Submit</button>
-    <p id="result"></p>
-    <h2 id="gift"></h2>
+<!-- 🖼️ PHOTOS -->
+<section class="card">
+  <h2>Your Moments 📸</h2>
+  <div class="gallery">
+    <img src="https://picsum.photos/300/200?1">
+    <img src="https://picsum.photos/300/200?2">
+    <img src="https://picsum.photos/300/200?3">
   </div>
+</section>
 
-</div>
+<!-- 🎥 VIDEOS -->
+<section class="card">
+  <h2>From People Who Love You 🎥</h2>
+  <video controls width="300">
+    <source src="your-video-link.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- 🎁 QUIZ -->
+<section class="card">
+  <h2>Unlock Your Gifts 🎁</h2>
+
+  <p id="question"></p>
+  <div id="options"></div>
+
+  <button onclick="checkAnswer()">Submit</button>
+
+  <p id="result"></p>
+  <h3 id="gift"></h3>
+</section>
 
 <script src="script.js"></script>
 </body>
