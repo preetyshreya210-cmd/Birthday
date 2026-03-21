@@ -3,307 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday ❤️</title>
+  <title>Happy Birthday KYC ❤️</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-glow"></div>
-  <div class="petals petals-left">🌹 ✦ 🌹 ✦ 🌹</div>
-  <div class="petals petals-right">✦ 🌹 ✦ 🌹 ✦</div>
-
-  <section class="hero" id="hero">
-    <div class="hero-card animate-in">
-      <div class="hero-flower tl">🌹</div>
-      <div class="hero-flower tr">🌹</div>
-      <p class="hero-tag">made with love, only for you</p>
-      <h1>HAPPY BIRTHDAY KYC ❤️</h1>
-      <p class="hero-date">26.06.2026</p>
-      <p class="hero-text">
-        A little world full of love, memories, letters, surprises, and reminders
-        that you are deeply, beautifully loved.
-      </p>
-      <button class="main-btn" onclick="enterWebsite()">Enter Your Surprise</button>
-    </div>
-  </section>
-
-  <section class="dashboard hidden" id="dashboard">
+  <div class="page-shell">
     <div class="topbar">
-      <div>
-        <h2>For The Birthday Boy ❤️</h2>
-        <p>Choose where you want to go.</p>
-      </div>
-      <button class="ghost-btn" onclick="goHome()">Back Home</button>
-    </div>
-
-    <div class="dashboard-grid">
-      <button class="dash-card" onclick="openSection('game')">
-        <div class="icon">🎁</div>
-        <h3>Play to Unlock Gifts</h3>
-        <p>Answer correctly and unlock all 20 gifts.</p>
-      </button>
-
-      <button class="dash-card" onclick="openSection('letters')">
-        <div class="icon">💌</div>
-        <h3>Letters Waiting for You</h3>
-        <p>Open little paper notes written just for you.</p>
-      </button>
-
-      <button class="dash-card" onclick="openSection('memories')">
-        <div class="icon">📸</div>
-        <h3>Memories With You</h3>
-        <p>Polaroids and moments I never want to forget.</p>
-      </button>
-
-      <button class="dash-card" onclick="openSection('videos')">
-        <div class="icon">🎥</div>
-        <h3>From Your People</h3>
-        <p>5 videos from me, family, and friends.</p>
-      </button>
-
-      <button class="dash-card" onclick="openSection('reasons')">
-        <div class="icon">❤️</div>
-        <h3>Reasons You're Loved</h3>
-        <p>Because the world should remind you more often.</p>
-      </button>
-
-      <button class="dash-card" onclick="openSection('final')">
-        <div class="icon">✨</div>
-        <h3>Final Surprise</h3>
-        <p>One last message for the most special person.</p>
-      </button>
-    </div>
-  </section>
-
-  <section class="panel hidden" id="gamePanel">
-    <div class="panel-wrap animate-up">
-      <div class="panel-top">
-        <h2>Play to Unlock Gifts 🎁</h2>
-        <button class="ghost-btn" onclick="closePanels()">Back to Menu</button>
-      </div>
-
-      <p class="panel-sub">Each correct answer unlocks the next gift. There are 20 gifts waiting.</p>
-
-      <div class="game-layout">
-        <div class="quiz-box">
-          <div id="progressText" class="progress-text">Question 1 of 20</div>
-          <h3 id="question">Loading question...</h3>
-          <div id="options" class="options"></div>
-          <button class="main-btn" onclick="checkAnswer()">Submit Answer</button>
-          <p id="result" class="result-text"></p>
-          <div id="giftReveal" class="gift-reveal hidden"></div>
-          <button id="nextBtn" class="secondary-btn hidden" onclick="nextQuestion()">Unlock Next Gift →</button>
-        </div>
-
-        <div class="celebration-box">
-          <h4>Celebration Corner ✨</h4>
-          <img
-            id="celebrationGif"
-            class="celebration-gif"
-            src="https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif"
-            alt="celebration gif"
-          />
-          <p>Correct answer = a celebration and your next gift.</p>
+      <div class="topbar-inner">
+        <div class="brand">Birthday for KYC ❤️</div>
+        <div class="nav">
+          <a class="active" href="index.html">Home</a>
+          <a href="gifts.html">Gifts</a>
+          <a href="letters.html">Letters</a>
+          <a href="memories.html">Memories</a>
+          <a href="videos.html">Videos</a>
+          <a href="reasons.html">Reasons</a>
+          <a href="final.html">Final</a>
         </div>
       </div>
-
-      <div id="finalGameMessage" class="paper-note hidden">
-        <h3>All 20 Gifts Unlocked ❤️</h3>
-        <p>
-          You did it. I hope every gift made you feel a little more celebrated,
-          and a little more loved.
-        </p>
-      </div>
     </div>
-  </section>
 
-  <section class="panel hidden" id="lettersPanel">
-    <div class="panel-wrap animate-up">
-      <div class="panel-top">
-        <h2>Letters Waiting for You 💌</h2>
-        <button class="ghost-btn" onclick="closePanels()">Back to Menu</button>
-      </div>
-
-      <div class="letters-board">
-        <div class="paper-letter" onclick="togglePaper(this)">
-          <div class="tape"></div>
-          <h3>Open when you miss me</h3>
-          <p class="hidden-paper">
-            No matter where you are, a part of my heart is always quietly with you.
-            You are never as far from me as you think.
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card fade-up">
+          <span class="ribbon">made with love, only for you</span>
+          <h1 class="script-title">Happy Birthday</h1>
+          <div class="hero-name">KYC ❤️</div>
+          <div class="hero-date">26.06.2026</div>
+          <p class="hero-text">
+            This is your little birthday world — with love, letters, memories,
+            surprises, videos, and every small reminder that you are deeply loved.
           </p>
+          <div class="flower-line floaty">✿ ✦ 🌸 ✦ 🌷 ✦ 🌹</div>
+          <div class="enter-row">
+            <a class="btn btn-primary" href="#dashboard">Enter Your Surprise</a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="paper-letter" onclick="togglePaper(this)">
-          <div class="tape"></div>
-          <h3>Open when you feel low</h3>
-          <p class="hidden-paper">
-            Bad days do not make you any less wonderful. They only make me want to
-            remind you more gently of how much you matter.
+    <section class="section" id="dashboard">
+      <div class="container">
+        <div class="section-card fade-up">
+          <span class="section-badge">your birthday dashboard</span>
+          <h2 class="section-title">Choose where you want to go</h2>
+          <p class="section-subtitle">
+            This is not a normal page. It’s a scrapbook of love made just for you.
           </p>
-        </div>
 
-        <div class="paper-letter" onclick="togglePaper(this)">
-          <div class="tape"></div>
-          <h3>Open when you need motivation</h3>
-          <p class="hidden-paper">
-            You have come so far already. You are capable of so much more than even
-            you give yourself credit for.
-          </p>
-        </div>
+          <div class="dashboard-grid">
+            <a class="dashboard-card" href="gifts.html">
+              <div class="dashboard-icon">🎁</div>
+              <h3>Play to Unlock Gifts</h3>
+              <p>Answer correctly and unlock all 20 gifts one by one.</p>
+            </a>
 
-        <div class="paper-letter" onclick="togglePaper(this)">
-          <div class="tape"></div>
-          <h3>Open when you want to smile</h3>
-          <p class="hidden-paper">
-            Think of our silly moments, our random talks, and all the little memories
-            that only make sense to us. There are many more waiting.
-          </p>
-        </div>
+            <a class="dashboard-card" href="letters.html">
+              <div class="dashboard-icon">💌</div>
+              <h3>Letters Waiting for You</h3>
+              <p>Paper-style notes written for your heart.</p>
+            </a>
 
-        <div class="paper-letter" onclick="togglePaper(this)">
-          <div class="tape"></div>
-          <h3>Open when you need love</h3>
-          <p class="hidden-paper">
-            You are loved on your best days, your quiet days, your tired days, and all
-            the days in between. Always.
-          </p>
-        </div>
+            <a class="dashboard-card" href="memories.html">
+              <div class="dashboard-icon">📸</div>
+              <h3>Memories With You</h3>
+              <p>Polaroids, captions, and little moments kept with love.</p>
+            </a>
 
-        <div class="paper-letter" onclick="togglePaper(this)">
-          <div class="tape"></div>
-          <h3>Open when you doubt yourself</h3>
-          <p class="hidden-paper">
-            You are enough exactly as you are. You do not have to earn the love that
-            already belongs to you.
-          </p>
+            <a class="dashboard-card" href="videos.html">
+              <div class="dashboard-icon">🎥</div>
+              <h3>From Your People</h3>
+              <p>5 videos from me, your family, and your friends.</p>
+            </a>
+
+            <a class="dashboard-card" href="reasons.html">
+              <div class="dashboard-icon">❤️</div>
+              <h3>Reasons You're Loved</h3>
+              <p>Because you deserve reminders of how special you are.</p>
+            </a>
+
+            <a class="dashboard-card" href="final.html">
+              <div class="dashboard-icon">✨</div>
+              <h3>Final Surprise</h3>
+              <p>One last letter for the birthday boy.</p>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="panel hidden" id="memoriesPanel">
-    <div class="panel-wrap animate-up">
-      <div class="panel-top">
-        <h2>Memories With You 📸</h2>
-        <button class="ghost-btn" onclick="closePanels()">Back to Menu</button>
-      </div>
-      <p class="panel-sub">Replace these with your real photos in the <b>photos</b> folder.</p>
-
-      <div class="polaroid-board">
-        <div class="polaroid rotate-left">
-          <img src="photos/pic1.jpg" alt="memory 1" />
-          <span>my favorite smile</span>
-        </div>
-        <div class="polaroid rotate-right">
-          <img src="photos/pic2.jpg" alt="memory 2" />
-          <span>you, being you</span>
-        </div>
-        <div class="polaroid rotate-left">
-          <img src="photos/pic3.jpg" alt="memory 3" />
-          <span>a soft little moment</span>
-        </div>
-        <div class="polaroid rotate-right">
-          <img src="photos/pic4.jpg" alt="memory 4" />
-          <span>one for the scrapbook</span>
-        </div>
-        <div class="polaroid rotate-left">
-          <img src="photos/pic5.jpg" alt="memory 5" />
-          <span>my heart likes this one</span>
-        </div>
-        <div class="polaroid rotate-right">
-          <img src="photos/pic6.jpg" alt="memory 6" />
-          <span>kept with love</span>
-        </div>
-        <div class="polaroid rotate-left">
-          <img src="photos/pic7.jpg" alt="memory 7" />
-          <span>our little memory</span>
-        </div>
-        <div class="polaroid rotate-right">
-          <img src="photos/pic8.jpg" alt="memory 8" />
-          <span>forever worth keeping</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel hidden" id="videosPanel">
-    <div class="panel-wrap animate-up">
-      <div class="panel-top">
-        <h2>From Your People 🎥</h2>
-        <button class="ghost-btn" onclick="closePanels()">Back to Menu</button>
-      </div>
-      <p class="panel-sub">Add your 5 real videos in the <b>videos</b> folder.</p>
-
-      <div class="video-grid">
-        <div class="video-card">
-          <h3>From Me ❤️</h3>
-          <video controls><source src="videos/video1.mp4" type="video/mp4" /></video>
-        </div>
-        <div class="video-card">
-          <h3>From Family 1</h3>
-          <video controls><source src="videos/video2.mp4" type="video/mp4" /></video>
-        </div>
-        <div class="video-card">
-          <h3>From Family 2</h3>
-          <video controls><source src="videos/video3.mp4" type="video/mp4" /></video>
-        </div>
-        <div class="video-card">
-          <h3>From Friend 1</h3>
-          <video controls><source src="videos/video4.mp4" type="video/mp4" /></video>
-        </div>
-        <div class="video-card">
-          <h3>From Friend 2</h3>
-          <video controls><source src="videos/video5.mp4" type="video/mp4" /></video>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel hidden" id="reasonsPanel">
-    <div class="panel-wrap animate-up">
-      <div class="panel-top">
-        <h2>Reasons You're Loved ❤️</h2>
-        <button class="ghost-btn" onclick="closePanels()">Back to Menu</button>
-      </div>
-
-      <div class="reasons-grid">
-        <div class="reason-card">You are loved because your presence feels like home.</div>
-        <div class="reason-card">You are loved because you make people feel safe.</div>
-        <div class="reason-card">You are loved because your smile softens hard days.</div>
-        <div class="reason-card">You are loved because you care deeply, even in little things.</div>
-        <div class="reason-card">You are loved because your laugh makes moments lighter.</div>
-        <div class="reason-card">You are loved because your heart is rare.</div>
-        <div class="reason-card">You are loved because you stay strong in difficult times.</div>
-        <div class="reason-card">You are loved because being you is already enough.</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel hidden" id="finalPanel">
-    <div class="panel-wrap animate-up">
-      <div class="panel-top">
-        <h2>Final Surprise ✨</h2>
-        <button class="ghost-btn" onclick="closePanels()">Back to Menu</button>
-      </div>
-
-      <div class="paper-note final-paper">
-        <h3>One Last Thing...</h3>
-        <p>
-          Happy Birthday, my love.
-          <br /><br />
-          I hope this little website made you smile, laugh, feel shy, and most of all,
-          feel loved.
-          <br /><br />
-          You are one of the most beautiful parts of my world, and I hope today reminds
-          you of just how special you are.
-          <br /><br />
-          No matter how many gifts you open, the biggest truth stays the same:
-          <b>you are so deeply loved.</b>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+    </section>
+  </div>
 </body>
 </html>
