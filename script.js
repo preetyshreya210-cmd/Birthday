@@ -104,19 +104,45 @@ const questions = [
 let currentQuestion = 0;
 let selectedOption = "";
 
-function showSection(id, clickedBtn) {
-  const sections = document.querySelectorAll(".content-section");
-  sections.forEach((section) => section.classList.remove("show"));
+function enterWebsite() {
+  document.getElementById("hero").classList.add("hidden");
+  document.getElementById("dashboard").classList.remove("hidden");
+}
 
-  const buttons = document.querySelectorAll(".menu-btn");
-  buttons.forEach((btn) => btn.classList.remove("active"));
+function goHome() {
+  closePanels();
+  document.getElementById("dashboard").classList.add("hidden");
+  document.getElementById("hero").classList.remove("hidden");
+}
 
-  document.getElementById(id).classList.add("show");
-  if (clickedBtn) clickedBtn.classList.add("active");
+function openSection(name) {
+  document.getElementById("dashboard").classList.add("hidden");
+
+  closePanels();
+
+  const map = {
+    game: "gamePanel",
+    letters: "lettersPanel",
+    memories: "memoriesPanel",
+    videos: "videosPanel",
+    reasons: "reasonsPanel",
+    final: "finalPanel",
+  };
+
+  const panel = document.getElementById(map[name]);
+  panel.classList.remove("hidden");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function closePanels() {
+  const panels = document.querySelectorAll(".panel");
+  panels.forEach((panel) => panel.classList.add("hidden"));
+  document.getElementById("dashboard").classList.remove("hidden");
 }
 
 function loadQuestion() {
   selectedOption = "";
+
   document.getElementById("progressText").innerText =
     `Question ${currentQuestion + 1} of ${questions.length}`;
 
@@ -141,8 +167,7 @@ function loadQuestion() {
 
 function selectOption(option, clickedBtn) {
   selectedOption = option;
-  const allOptions = document.querySelectorAll(".option-btn");
-  allOptions.forEach((btn) => btn.classList.remove("selected"));
+  document.querySelectorAll(".option-btn").forEach((btn) => btn.classList.remove("selected"));
   clickedBtn.classList.add("selected");
 }
 
@@ -150,16 +175,17 @@ function checkAnswer() {
   const result = document.getElementById("result");
   const giftReveal = document.getElementById("giftReveal");
   const nextBtn = document.getElementById("nextBtn");
+  const celebrationGif = document.getElementById("celebrationGif");
 
   if (!selectedOption) {
-    result.style.color = "#ffb347";
+    result.style.color = "#ffcc73";
     result.innerText = "Select an option first ❤️";
     return;
   }
 
   if (selectedOption === questions[currentQuestion].answer) {
     const giftNumber = currentQuestion + 1;
-    result.style.color = "#7dffb0";
+    result.style.color = "#94ffb2";
     result.innerText = "Correct 🎉 You unlocked the next gift.";
 
     giftReveal.innerHTML = `
@@ -169,11 +195,14 @@ function checkAnswer() {
     `;
     giftReveal.classList.remove("hidden");
     nextBtn.classList.remove("hidden");
+
+    celebrationGif.src = "https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif";
   } else {
-    result.style.color = "#ff8f8f";
+    result.style.color = "#ff9f9f";
     result.innerText = "That’s not correct. Try again, love ❤️";
     giftReveal.classList.add("hidden");
     nextBtn.classList.add("hidden");
+    celebrationGif.src = "https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif";
   }
 }
 
@@ -184,21 +213,19 @@ function nextQuestion() {
     loadQuestion();
   } else {
     document.getElementById("finalGameMessage").classList.remove("hidden");
+    document.getElementById("progressText").innerText = "All gifts unlocked";
+    document.getElementById("question").innerText = "You unlocked everything ❤️";
+    document.getElementById("options").innerHTML = "";
     document.getElementById("result").innerText = "";
     document.getElementById("giftReveal").classList.add("hidden");
     document.getElementById("nextBtn").classList.add("hidden");
-    document.getElementById("question").innerText = "You unlocked everything ❤️";
-    document.getElementById("options").innerHTML = "";
-    document.getElementById("progressText").innerText = "All gifts unlocked";
   }
 }
 
-function toggleLetter(button) {
-  const next = button.nextElementSibling;
-  next.classList.toggle("hidden-letter");
+function togglePaper(card) {
+  card.classList.toggle("open");
 }
 
 window.onload = () => {
   loadQuestion();
-  showSection("home", document.querySelector(".menu-btn"));
 };
