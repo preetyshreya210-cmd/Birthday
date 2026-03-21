@@ -111,6 +111,7 @@ function renderQuiz() {
   const resultEl = document.getElementById("result");
   const giftBox = document.getElementById("giftBox");
   const nextBtn = document.getElementById("nextBtn");
+  const celebrateImg = document.getElementById("celebrateImg");
 
   if (!progress || !questionEl || !optionsEl) return;
 
@@ -118,6 +119,10 @@ function renderQuiz() {
   resultEl.textContent = "";
   giftBox.innerHTML = "";
   nextBtn.style.display = "none";
+
+  if (celebrateImg) {
+    celebrateImg.src = "https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif";
+  }
 
   const q = questions[currentQuestion];
   progress.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
@@ -133,35 +138,75 @@ function renderQuiz() {
   });
 }
 
-function selectOption(option, btn) {
+function selectOption(option, clickedBtn) {
   selectedOption = option;
-  document.querySelectorAll(".option-btn").forEach((b) => b.classList.remove("selected"));
-  btn.classList.add("selected");
+  document.querySelectorAll(".option-btn").forEach((btn) => btn.classList.remove("selected"));
+  clickedBtn.classList.add("selected");
 }
 
 function checkAnswer() {
   const resultEl = document.getElementById("result");
   const giftBox = document.getElementById("giftBox");
   const nextBtn = document.getElementById("nextBtn");
+  const celebrateImg = document.getElementById("celebrateImg");
 
   if (!selectedOption) {
-    resultEl.style.color = "#c07a00";
-    resultEl.textContent = "Please select an option first 💌";
+    resultEl.style.color = "#c48829";
+    resultEl.textContent = "Select an option first 💌";
     return;
   }
 
   if (selectedOption === questions[currentQuestion].answer) {
     const giftNumber = currentQuestion + 1;
-    resultEl.style.color = "#15803d";
+    resultEl.style.color = "#1f8a4d";
     resultEl.textContent = "Correct 🎉 You unlocked the next gift.";
 
     giftBox.innerHTML = `
       <div>Go open</div>
       <div class="gift-big">Gift #${giftNumber} 🎁</div>
-      <div>Then click next for the next question.</div>
+      <div>Then click next for the next surprise.</div>
     `;
+
     nextBtn.style.display = "inline-block";
+
+    if (celebrateImg) {
+      celebrateImg.src = "https://media.giphy.com/media/3KC2jD2QcBOSc/giphy.gif";
+    }
   } else {
-    resultEl.style.color = "#dc2626";
+    resultEl.style.color = "#d24747";
     resultEl.textContent = "Oops, that's not correct. Try again ❤️";
-    giftBox.inner
+    giftBox.innerHTML = "";
+    nextBtn.style.display = "none";
+
+    if (celebrateImg) {
+      celebrateImg.src = "https://media.giphy.com/media/Wvo6vaUsQa3Di/giphy.gif";
+    }
+  }
+}
+
+function nextQuestion() {
+  currentQuestion++;
+
+  if (currentQuestion < questions.length) {
+    renderQuiz();
+  } else {
+    document.getElementById("progress").textContent = "All gifts unlocked ❤️";
+    document.getElementById("question").textContent = "You unlocked all 20 gifts.";
+    document.getElementById("options").innerHTML = "";
+    document.getElementById("result").textContent = "";
+    document.getElementById("giftBox").innerHTML = `
+      <div class="gift-big">All 20 Gifts Unlocked 🎉</div>
+      <div>You did it, birthday boy.</div>
+    `;
+    document.getElementById("nextBtn").style.display = "none";
+
+    const celebrateImg = document.getElementById("celebrateImg");
+    if (celebrateImg) {
+      celebrateImg.src = "https://media.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif";
+    }
+  }
+}
+
+window.onload = function () {
+  renderQuiz();
+};
