@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unlock Gifts 🎁</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">Birthday for KYC ❤️</div>
+        <div class="nav">
+          <a href="index.html">Home</a>
+          <a class="active" href="gifts.html">Gifts</a>
+          <a href="letters.html">Letters</a>
+          <a href="memories.html">Memories</a>
+          <a href="videos.html">Videos</a>
+          <a href="reasons.html">Reasons</a>
+          <a href="final.html">Final</a>
+        </div>
+      </div>
+    </div>
 
+    <section class="section">
+      <div class="container">
+        <div class="section-card fade-up">
+          <span class="section-badge">game time</span>
+          <h2 class="section-title">Play to Unlock Gifts</h2>
+          <p class="section-subtitle">
+            Each correct answer unlocks the next gift. You have 20 gifts waiting.
+          </p>
+
+          <div class="quiz-wrap">
+            <div class="quiz-box">
+              <div id="progress" class="progress"></div>
+              <p id="question" class="question"></p>
+              <div id="options" class="options"></div>
+              <button class="btn btn-primary" onclick="checkAnswer()">Submit Answer</button>
+              <div id="result" class="result"></div>
+              <div id="giftBox" class="gift-box"></div>
+              <button id="nextBtn" class="btn btn-secondary" style="display:none;" onclick="nextQuestion()">Next Question →</button>
+            </div>
+
+            <div class="side-box">
+              <h3>Celebration Corner ✨</h3>
+              <img
+                id="celebrateImg"
+                class="celebration-img"
+                src="https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif"
+                alt="celebration"
+              />
+              <p>
+                Every correct answer unlocks one more surprise for you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
