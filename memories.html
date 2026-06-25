@@ -3,54 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Our Memories ❤️</title>
+<title>Memories With You ❤️</title>
 
 <style>
-
 body{
 margin:0;
 padding:0;
-font-family:'Georgia',serif;
+font-family:Georgia, serif;
 background:#fdf6ec;
-overflow-x:hidden;
+color:#444;
 }
 
-header{
+.navbar{
+background:white;
+padding:20px;
+display:flex;
+justify-content:center;
+gap:25px;
+box-shadow:0 2px 15px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.navbar a{
+text-decoration:none;
+color:#d45d79;
+font-weight:bold;
+}
+
+.hero{
 text-align:center;
-padding:50px 20px;
+padding:60px 20px 30px;
 }
 
-header h1{
+.hero h1{
 font-size:3rem;
 color:#d45d79;
 margin-bottom:10px;
 }
 
-header p{
-font-size:1.1rem;
-color:#555;
+.hero p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
+
+.story-card{
+max-width:850px;
+margin:40px auto;
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+line-height:2;
+}
+
+.story-card h2{
+text-align:center;
+color:#d45d79;
+}
+
+.timeline-title{
+text-align:center;
+font-size:2rem;
+margin-top:60px;
+color:#d45d79;
 }
 
 .scrapbook{
-max-width:1300px;
+max-width:1200px;
 margin:auto;
 padding:40px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:50px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
 }
 
 .polaroid{
 background:white;
 padding:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
-transform:rotate(-3deg);
-transition:.4s;
-}
-
-.polaroid:nth-child(even){
-transform:rotate(3deg);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+border-radius:10px;
+transition:0.3s;
 }
 
 .polaroid:hover{
@@ -59,192 +94,153 @@ transform:scale(1.05);
 
 .polaroid img{
 width:100%;
-height:300px;
+height:320px;
 object-fit:cover;
+border-radius:8px;
 }
 
 .caption{
 text-align:center;
-margin-top:10px;
-font-size:1rem;
-color:#444;
+margin-top:12px;
 font-style:italic;
 }
 
-.story{
-max-width:900px;
-margin:60px auto;
-background:white;
-padding:40px;
-border-radius:25px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-line-height:2;
-font-size:1.1rem;
-}
-
-.story h2{
+.section-heading{
 text-align:center;
+font-size:2rem;
+margin-top:60px;
 color:#d45d79;
-margin-bottom:25px;
 }
 
-.heart{
-position:fixed;
-color:pink;
-animation:float 8s linear infinite;
-opacity:0.6;
-font-size:20px;
-}
-
-@keyframes float{
-0%{
-transform:translateY(100vh);
-}
-100%{
-transform:translateY(-100px);
-}
-}
-
-.back{
-display:flex;
-justify-content:center;
+.back-btn{
+text-align:center;
 padding:50px;
 }
 
-.back a{
+.back-btn a{
 background:#d45d79;
-padding:15px 35px;
-border-radius:40px;
 color:white;
+padding:15px 30px;
+border-radius:30px;
 text-decoration:none;
 font-weight:bold;
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="heart" style="left:10%">❤️</div>
-<div class="heart" style="left:30%;animation-delay:2s">🌸</div>
-<div class="heart" style="left:60%;animation-delay:4s">❤️</div>
-<div class="heart" style="left:80%;animation-delay:1s">🌷</div>
+<div class="navbar">
+<a href="index.html">Home</a>
+<a href="gifts.html">Gifts</a>
+<a href="letters.html">Letters</a>
+<a href="videos.html">Videos</a>
+<a href="reasons.html">Reasons</a>
+<a href="final.html">Final Surprise</a>
+</div>
 
-<header>
-
-<h1>Our Memories 📸</h1>
+<div class="hero">
+<h1>📸 Our Memories</h1>
 
 <p>
-A scrapbook of moments that made my world softer,
-happier and more beautiful.
+A scrapbook of moments, memories and little pieces of time
+that deserve to be remembered forever.
+</p>
+</div>
+
+<div class="story-card">
+
+<h2>❤️ Our Story</h2>
+
+<p>
+9 November.
 </p>
 
-</header>
-
-<div class="story">
-
-<h2>Our Story ❤️</h2>
+<p>
+The day you confessed.
+</p>
 
 <p>
+Maybe for everyone else it was just another day,
+but for me it became one of the most special memories of my life.
+</p>
 
-9 November.
+<p>
+Since that day, everything became brighter.
+The conversations became longer.
+The laughs became louder.
+And the memories became more beautiful.
+</p>
 
-The day you confessed.
+<p>
+You became one of my favourite people,
+and every day since then has felt a little more special because of you.
+</p>
 
-Maybe for the world it was just another date,
-but for me it became one of the most important dates of my life.
-
-Since that day, everything somehow became brighter.
-
-Every random conversation.
-
-Every late-night call.
-
-Every silly joke.
-
-Every little argument.
-
-Every moment became a memory worth keeping.
-
-You didn't just become a part of my life.
-
-You became one of my favorite parts of it.
-
-And today, on your birthday,
-I wanted to keep some of these memories together,
-like little pieces of a scrapbook,
-because every page somehow leads back to you.
-
+<p>
+So this page is simply a collection of moments,
+because some memories deserve to stay forever.
+❤️
 </p>
 
 </div>
 
+<h2 class="section-heading">👶 Little KYC</h2>
+
 <div class="scrapbook">
 
 <div class="polaroid">
-<img src="photos/baby1.jpg">
+<img src="photos/baby1.jpg" alt="Childhood Photo 1">
 <div class="caption">
 The cutest little boy ❤️
 </div>
 </div>
 
 <div class="polaroid">
-<img src="photos/baby2.jpg">
+<img src="photos/baby2.jpg" alt="Childhood Photo 2">
 <div class="caption">
 Still the same innocent eyes 🥺
 </div>
 </div>
 
+</div>
+
+<h2 class="section-heading">🌟 The Boy I Know Today</h2>
+
+<div class="scrapbook">
+
 <div class="polaroid">
-<img src="photos/pic3.jpg">
+<img src="https://via.placeholder.com/400x500">
 <div class="caption">
-One of my favorite photos 🌷
+Kind. Loyal. Funny.
 </div>
 </div>
 
 <div class="polaroid">
-<img src="photos/pic4.jpg">
+<img src="https://via.placeholder.com/400x500">
 <div class="caption">
-UPSC lover energy 📚
+The UPSC Warrior 📚
 </div>
 </div>
 
 <div class="polaroid">
-<img src="photos/pic5.jpg">
+<img src="https://via.placeholder.com/400x500">
 <div class="caption">
 A smile worth protecting ❤️
 </div>
 </div>
 
 <div class="polaroid">
-<img src="photos/pic6.jpg">
+<img src="https://via.placeholder.com/400x500">
 <div class="caption">
-My favorite gentleman 🌸
-</div>
-</div>
-
-<div class="polaroid">
-<img src="photos/pic7.jpg">
-<div class="caption">
-Forever scrapbook material 📸
-</div>
-</div>
-
-<div class="polaroid">
-<img src="photos/pic8.jpg">
-<div class="caption">
-One more memory to keep forever 💌
+Forever scrapbook material 🌸
 </div>
 </div>
 
 </div>
 
-<div class="back">
-
-<a href="index.html">
-⬅ Back To Dashboard
-</a>
-
+<div class="back-btn">
+<a href="index.html">⬅ Back To Dashboard</a>
 </div>
 
 </body>
