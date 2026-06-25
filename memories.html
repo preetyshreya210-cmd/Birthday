@@ -1,54 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Memories 📸</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Memories ❤️</title>
+
+<style>
+
+body{
+margin:0;
+padding:0;
+font-family:'Georgia',serif;
+background:#fdf6ec;
+overflow-x:hidden;
+}
+
+header{
+text-align:center;
+padding:50px 20px;
+}
+
+header h1{
+font-size:3rem;
+color:#d45d79;
+margin-bottom:10px;
+}
+
+header p{
+font-size:1.1rem;
+color:#555;
+}
+
+.scrapbook{
+max-width:1300px;
+margin:auto;
+padding:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:50px;
+}
+
+.polaroid{
+background:white;
+padding:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+transform:rotate(-3deg);
+transition:.4s;
+}
+
+.polaroid:nth-child(even){
+transform:rotate(3deg);
+}
+
+.polaroid:hover{
+transform:scale(1.05);
+}
+
+.polaroid img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.caption{
+text-align:center;
+margin-top:10px;
+font-size:1rem;
+color:#444;
+font-style:italic;
+}
+
+.story{
+max-width:900px;
+margin:60px auto;
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+line-height:2;
+font-size:1.1rem;
+}
+
+.story h2{
+text-align:center;
+color:#d45d79;
+margin-bottom:25px;
+}
+
+.heart{
+position:fixed;
+color:pink;
+animation:float 8s linear infinite;
+opacity:0.6;
+font-size:20px;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-100px);
+}
+}
+
+.back{
+display:flex;
+justify-content:center;
+padding:50px;
+}
+
+.back a{
+background:#d45d79;
+padding:15px 35px;
+border-radius:40px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
 </head>
+
 <body>
-  <div class="page-shell">
-    <div class="topbar">
-      <div class="topbar-inner">
-        <div class="brand">Birthday for KYC ❤️</div>
-        <div class="nav">
-          <a href="index.html">Home</a>
-          <a href="gifts.html">Gifts</a>
-          <a href="letters.html">Letters</a>
-          <a class="active" href="memories.html">Memories</a>
-          <a href="videos.html">Videos</a>
-          <a href="reasons.html">Reasons</a>
-          <a href="final.html">Final</a>
-        </div>
-      </div>
-    </div>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-card fade-up">
-          <span class="section-badge">scrapbook page</span>
-          <h2 class="section-title">Memories With You</h2>
-          <p class="section-subtitle">
-            Replace these sample files with your real photos inside the <b>photos</b> folder.
-          </p>
+<div class="heart" style="left:10%">❤️</div>
+<div class="heart" style="left:30%;animation-delay:2s">🌸</div>
+<div class="heart" style="left:60%;animation-delay:4s">❤️</div>
+<div class="heart" style="left:80%;animation-delay:1s">🌷</div>
 
-          <div class="polaroid-grid">
-            <div class="polaroid polaroid-left"><img src="photos/pic1.jpg" alt=""><span>my favorite smile</span></div>
-            <div class="polaroid polaroid-right"><img src="photos/pic2.jpg" alt=""><span>birthday boy energy</span></div>
-            <div class="polaroid polaroid-left"><img src="photos/pic3.jpg" alt=""><span>soft little moment</span></div>
-            <div class="polaroid polaroid-right"><img src="photos/pic4.jpg" alt=""><span>one for forever</span></div>
-            <div class="polaroid polaroid-left"><img src="photos/pic5.jpg" alt=""><span>kept with love</span></div>
-            <div class="polaroid polaroid-right"><img src="photos/pic6.jpg" alt=""><span>you, being you</span></div>
-            <div class="polaroid polaroid-left"><img src="photos/pic7.jpg" alt=""><span>our little memory</span></div>
-            <div class="polaroid polaroid-right"><img src="photos/pic8.jpg" alt=""><span>scrapbook worthy</span></div>
-            <div class="polaroid polaroid-left"><img src="photos/pic9.jpg" alt=""><span>a memory I keep</span></div>
-            <div class="polaroid polaroid-right"><img src="photos/pic10.jpg" alt=""><span>one more for us</span></div>
-            <div class="polaroid polaroid-left"><img src="photos/pic11.jpg" alt=""><span>this one is special</span></div>
-            <div class="polaroid polaroid-right"><img src="photos/pic12.jpg" alt=""><span>favorite forever</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+<header>
+
+<h1>Our Memories 📸</h1>
+
+<p>
+A scrapbook of moments that made my world softer,
+happier and more beautiful.
+</p>
+
+</header>
+
+<div class="story">
+
+<h2>Our Story ❤️</h2>
+
+<p>
+
+9 November.
+
+The day you confessed.
+
+Maybe for the world it was just another date,
+but for me it became one of the most important dates of my life.
+
+Since that day, everything somehow became brighter.
+
+Every random conversation.
+
+Every late-night call.
+
+Every silly joke.
+
+Every little argument.
+
+Every moment became a memory worth keeping.
+
+You didn't just become a part of my life.
+
+You became one of my favorite parts of it.
+
+And today, on your birthday,
+I wanted to keep some of these memories together,
+like little pieces of a scrapbook,
+because every page somehow leads back to you.
+
+</p>
+
+</div>
+
+<div class="scrapbook">
+
+<div class="polaroid">
+<img src="photos/baby1.jpg">
+<div class="caption">
+The cutest little boy ❤️
+</div>
+</div>
+
+<div class="polaroid">
+<img src="photos/baby2.jpg">
+<div class="caption">
+Still the same innocent eyes 🥺
+</div>
+</div>
+
+<div class="polaroid">
+<img src="photos/pic3.jpg">
+<div class="caption">
+One of my favorite photos 🌷
+</div>
+</div>
+
+<div class="polaroid">
+<img src="photos/pic4.jpg">
+<div class="caption">
+UPSC lover energy 📚
+</div>
+</div>
+
+<div class="polaroid">
+<img src="photos/pic5.jpg">
+<div class="caption">
+A smile worth protecting ❤️
+</div>
+</div>
+
+<div class="polaroid">
+<img src="photos/pic6.jpg">
+<div class="caption">
+My favorite gentleman 🌸
+</div>
+</div>
+
+<div class="polaroid">
+<img src="photos/pic7.jpg">
+<div class="caption">
+Forever scrapbook material 📸
+</div>
+</div>
+
+<div class="polaroid">
+<img src="photos/pic8.jpg">
+<div class="caption">
+One more memory to keep forever 💌
+</div>
+</div>
+
+</div>
+
+<div class="back">
+
+<a href="index.html">
+⬅ Back To Dashboard
+</a>
+
+</div>
+
 </body>
 </html>
