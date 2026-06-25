@@ -1,199 +1,334 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Letters 💌</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .letters-wrap {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
-      margin-top: 22px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letters For KYC ❤️</title>
 
-    .letter-paper {
-      background: linear-gradient(180deg, #fff8ec, #f7ead0);
-      border-radius: 12px;
-      padding: 26px 18px 18px;
-      box-shadow: 0 14px 28px rgba(106, 78, 47, 0.12);
-      position: relative;
-      color: #59442d;
-    }
+<style>
 
-    .letter-paper::before {
-      content: "";
-      position: absolute;
-      top: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 86px;
-      height: 24px;
-      background: rgba(255,255,255,0.5);
-      border: 1px solid rgba(220,220,220,0.68);
-    }
+body{
+margin:0;
+font-family:Georgia, serif;
+background:linear-gradient(to bottom,#fff8f2,#fdecef);
+}
 
-    .letter-paper h3 {
-      margin: 0 0 12px;
-      font-family: "Great Vibes", cursive;
-      font-size: 2rem;
-      color: #b56444;
-      font-weight: 400;
-    }
+.navbar{
+background:white;
+padding:18px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
 
-    .letter-paper p {
-      line-height: 1.9;
-      margin: 14px 0 0;
-    }
+.navbar a{
+text-decoration:none;
+color:#d45d79;
+font-weight:bold;
+}
 
-    details {
-      margin-top: 10px;
-    }
+.hero{
+text-align:center;
+padding:60px 20px;
+}
 
-    summary {
-      list-style: none;
-      cursor: pointer;
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #fff0c8, #f9dce4);
-      color: #9e4760;
-      font-weight: 600;
-      box-shadow: 0 10px 26px rgba(176, 110, 132, 0.08);
-    }
+.hero h1{
+font-size:3rem;
+color:#d45d79;
+}
 
-    summary::-webkit-details-marker {
-      display: none;
-    }
+.hero p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
 
-    summary::after {
-      content: "Open Letter";
-    }
+.letters{
+max-width:1200px;
+margin:auto;
+padding:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
 
-    details[open] summary::after {
-      content: "Close Letter";
-    }
-  </style>
+.envelope{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.envelope h3{
+text-align:center;
+color:#d45d79;
+}
+
+details{
+margin-top:15px;
+}
+
+summary{
+cursor:pointer;
+list-style:none;
+text-align:center;
+padding:12px;
+border-radius:30px;
+background:#d45d79;
+color:white;
+font-weight:bold;
+}
+
+summary::-webkit-details-marker{
+display:none;
+}
+
+.letter{
+margin-top:15px;
+background:#fff8ec;
+padding:20px;
+border-radius:15px;
+line-height:1.9;
+color:#5b4633;
+box-shadow:inset 0 0 15px rgba(0,0,0,0.05);
+}
+
+.footer{
+text-align:center;
+padding:50px;
+}
+
+.footer a{
+background:#d45d79;
+color:white;
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+
 </head>
+
 <body>
-  <div class="page-shell">
-    <div class="topbar">
-      <div class="topbar-inner">
-        <div class="brand">Birthday for KYC ❤️</div>
-        <div class="nav">
-          <a href="index.html">Home</a>
-          <a href="gifts.html">Gifts</a>
-          <a class="active" href="letters.html">Letters</a>
-          <a href="memories.html">Memories</a>
-          <a href="videos.html">Videos</a>
-          <a href="reasons.html">Reasons</a>
-          <a href="final.html">Final</a>
-        </div>
-      </div>
-    </div>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-card fade-up">
-          <span class="section-badge">for your heart</span>
-          <h2 class="section-title">Letters Waiting for You</h2>
-          <p class="section-subtitle">
-            Click each note to open what is written inside.
-          </p>
+<div class="navbar">
+<a href="index.html">Home</a>
+<a href="gifts.html">Gifts</a>
+<a href="letters.html">Letters</a>
+<a href="memories.html">Memories</a>
+<a href="videos.html">Videos</a>
+<a href="reasons.html">Reasons</a>
+<a href="final.html">Final Surprise</a>
+</div>
 
-          <div class="letters-wrap">
-            <div class="letter-paper">
-              <h3>Open when you miss me</h3>
-              <details>
-                <summary></summary>
-                <p>
-                  No matter where you are, a part of my heart is always with you.
-                  Distance can never really change that.
-                </p>
-              </details>
-            </div>
+<div class="hero">
+<h1>💌 Letters Waiting For You</h1>
 
-            <div class="letter-paper">
-              <h3>Open when you feel low</h3>
-              <details>
-                <summary></summary>
-                <p>
-                  You are still soft, still special, still enough — even on the days
-                  that feel heavy.
-                </p>
-              </details>
-            </div>
+<p>
+Some words are meant to be saved for the moments when you need them most.
+Open these whenever your heart asks you to.
+❤️
+</p>
+</div>
 
-            <div class="letter-paper">
-              <h3>Open when you need motivation</h3>
-              <details>
-                <summary></summary>
-                <p>
-                  I hope you never forget how capable you are. You have already come
-                  so far.
-                </p>
-              </details>
-            </div>
+<div class="letters">
 
-            <div class="letter-paper">
-              <h3>Open when you want to smile</h3>
-              <details>
-                <summary></summary>
-                <p>
-                  Think of our silly little moments and know there are so many more
-                  waiting for us.
-                </p>
-              </details>
-            </div>
+<div class="envelope">
+<h3>💌 Open When You Miss Me</h3>
+<details>
+<summary>Open Letter</summary>
+<div class="letter">
+Hi love,<br><br>
 
-            <div class="letter-paper">
-              <h3>Open when you need love</h3>
-              <details>
-                <summary></summary>
-                <p>
-                  You are loved on your best days, tired days, quiet days, and every
-                  in-between day too.
-                </p>
-              </details>
-            </div>
+If you're reading this, I'm guessing you're missing me a little.
+So here's a reminder that no matter where we are, no matter how busy life gets,
+you will always have a place in my heart.<br><br>
 
-            <div class="letter-paper">
-              <h3>Open when you doubt yourself</h3>
-              <details>
-                <summary></summary>
-                <p>
-                  You are already enough. You do not have to earn the love that is
-                  already yours.
-                </p>
-              </details>
-            </div>
+Whenever you miss me, remember our conversations, our laughter, and all the little moments that became special simply because they were with you.<br><br>
 
-            <div class="letter-paper">
-              <h3>Open when you cannot sleep</h3>
-              <details>
-                <summary></summary>
-                <p>
-                  Close your eyes and imagine me telling you that everything will be okay,
-                  and tomorrow will be kinder.
-                </p>
-              </details>
-            </div>
+And if you still miss me after reading this... call me. ❤️<br><br>
 
-            <div class="letter-paper">
-              <h3>Open when you need a reminder</h3>
-              <details>
-                <summary></summary>
-                <p>
-                  You are one of the most special people in my life, and I hope you never
-                  forget how deeply you are loved.
-                </p>
-              </details>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+— Shreya
+
+</div>
+</details>
+</div>
+
+<div class="envelope">
+<h3>🌧 Open When You Feel Low</h3>
+<details>
+<summary>Open Letter</summary>
+<div class="letter">
+I know there will be days when everything feels too heavy.<br><br>
+
+But please remember something.<br><br>
+
+I see how hard you work.
+I see the effort you put in even when nobody is watching.
+I see the strength it takes to keep going.<br><br>
+
+You are kind.
+You are intelligent.
+You are capable.
+And you are stronger than you think.<br><br>
+
+Tomorrow is another chance.
+And I will always believe in you.
+❤️
+
+</div>
+</details>
+</div>
+
+<div class="envelope">
+<h3>📚 Open When You Need Motivation</h3>
+<details>
+<summary>Open Letter</summary>
+<div class="letter">
+My UPSC warrior,<br><br>
+
+One day all those long study hours,
+late nights and sacrifices will make sense.<br><br>
+
+Don't quit because it feels difficult.
+The future version of you is already proud that you kept going.<br><br>
+
+And so am I.
+❤️
+
+</div>
+</details>
+</div>
+
+<div class="envelope">
+<h3>😊 Open When You Want To Smile</h3>
+<details>
+<summary>Open Letter</summary>
+<div class="letter">
+Quick reminder:<br><br>
+
+You're actually very funny.
+And yes, sometimes extremely annoying too. 😂<br><br>
+
+Think about all our random conversations,
+all our silly moments,
+and all the times we laughed at things that made absolutely no sense.<br><br>
+
+Somewhere, I'm probably smiling because of you too.
+❤️
+
+</div>
+</details>
+</div>
+
+<div class="envelope">
+<h3>❤️ Open When You Need Love</h3>
+<details>
+<summary>Open Letter</summary>
+<div class="letter">
+You do not need to earn love.<br><br>
+
+You are loved on your happy days,
+your quiet days,
+your tired days,
+and your difficult days.<br><br>
+
+You are loved for your kindness,
+your loyalty,
+your soft heart,
+and your gentleman behaviour.<br><br>
+
+Never forget that.
+❤️
+
+</div>
+</details>
+</div>
+
+<div class="envelope">
+<h3>🌟 Open When You Doubt Yourself</h3>
+<details>
+<summary>Open Letter</summary>
+<div class="letter">
+If you're doubting yourself right now,
+borrow my belief in you.<br><br>
+
+I've seen your dedication.
+I've seen your patience.
+I've seen your determination.<br><br>
+
+You are doing better than you think.
+Keep going.
+❤️
+
+</div>
+</details>
+</div>
+
+<div class="envelope">
+<h3>🌙 Open When You Cannot Sleep</h3>
+<details>
+<summary>Open Letter</summary>
+<div class="letter">
+Hey sleepyhead,<br><br>
+
+Take a deep breath.<br><br>
+
+Imagine we're sitting together,
+talking about random things,
+laughing about absolutely nothing.<br><br>
+
+Everything is okay.
+The world can wait until tomorrow.<br><br>
+
+Goodnight KYC.
+Sweet dreams.
+❤️
+
+</div>
+</details>
+</div>
+
+<div class="envelope">
+<h3>🥹 Open When You Need A Reminder</h3>
+<details>
+<summary>Open Letter</summary>
+<div class="letter">
+Just in case nobody reminded you today...<br><br>
+
+You are one of the best people I know.<br><br>
+
+You are soft.
+You are kind.
+You are funny.
+You are loyal.<br><br>
+
+And on 9 November,
+when you confessed,
+you unknowingly gave me one of the most special memories of my life.<br><br>
+
+You matter.
+You are loved.
+And you make people's lives better simply by being in them.<br><br>
+
+Including mine.<br><br>
+
+Always. ❤️
+
+</div>
+</details>
+</div>
+
+</div>
+
+<div class="footer">
+<a href="index.html">⬅ Back To Dashboard</a>
+</div>
+
 </body>
 </html>
